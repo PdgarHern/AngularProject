@@ -1,0 +1,11 @@
+<div class="topnav">
+    <app-header-logo></app-header-logo>
+    <div class="menuBtn">
+        <a id="btnInicio" href="#home" *ngIf="home == 0">Inicio</a>
+        <a id="btnContacto" href="#contact" *ngIf="contact == 0">Contacto</a>
+        <a id="btnConfig" href="#config" *ngIf="config == 0">Configuración</a>
+    </div>
+    <div class="logIn">
+        <app-login id="login"></app-login>
+    </div>
+</div>
