@@ -12,6 +12,8 @@ import { LoginComponent } from './login/login.component';
 import { FooterComponent } from './footer/footer.component';
 import { HomeComponent } from './views/home/home.component';
 import { SliderComponent } from './slider/slider.component';
+import { EmpleadosComponent } from './empleados/empleados.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -24,11 +26,13 @@ import { SliderComponent } from './slider/slider.component';
     LoginComponent,
     FooterComponent,
     HomeComponent,
-    SliderComponent
+    SliderComponent,
+    EmpleadosComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
