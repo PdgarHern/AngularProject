@@ -3,6 +3,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { Empleado } from '../modelos/empleados';
 import { EmpleadosServiceService } from '../shared/services/empleados-service.service';
 import { LoadScriptsService } from '../shared/services/load-scripts.service';
+import { LoadScripts2Service } from '../shared/services/load-scripts2.service';
 
 @Component({
   selector: 'app-empleados',
@@ -13,7 +14,7 @@ export class EmpleadosComponent implements OnInit {
 
   public empleados: Array<Empleado> = [];
 
-  constructor(private empleadoService: EmpleadosServiceService, private router: Router, route: ActivatedRoute, private nameJs: LoadScriptsService) {
+  constructor(private empleadoService: EmpleadosServiceService, private router: Router, route: ActivatedRoute, private nameJs: LoadScripts2Service) {
 
     route.params.subscribe((x) => {
       this.loadInfo();
