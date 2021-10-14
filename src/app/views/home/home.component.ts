@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { MenuComponent } from 'src/app/menu/menu.component';
 import { Empleado } from 'src/app/modelos/empleados';
 import { EmpleadosServiceService } from 'src/app/shared/services/empleados-service.service';
 import { LoadScriptsService } from 'src/app/shared/services/load-scripts.service';
@@ -10,6 +11,7 @@ import { LoadScriptsService } from 'src/app/shared/services/load-scripts.service
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
+  
 
   public empleados: Array<Empleado> = [];
 
@@ -28,5 +30,7 @@ export class HomeComponent implements OnInit {
       this.empleados = e;
     })
   }
+
+  
 
 }

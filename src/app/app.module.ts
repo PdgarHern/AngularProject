@@ -14,6 +14,7 @@ import { HomeComponent } from './views/home/home.component';
 import { SliderComponent } from './slider/slider.component';
 import { EmpleadosComponent } from './empleados/empleados.component';
 import { HttpClientModule } from '@angular/common/http';
+import { ContactComponent } from './views/contact/contact.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { HttpClientModule } from '@angular/common/http';
     FooterComponent,
     HomeComponent,
     SliderComponent,
-    EmpleadosComponent
+    EmpleadosComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,
