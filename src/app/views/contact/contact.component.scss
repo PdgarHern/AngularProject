@@ -71,7 +71,7 @@
   display: flex;
   flex-direction: row;
   align-items: flex-start;
-  margin-bottom: 20px;
+  padding-bottom: 5px;
 }
 
 .nameForm p {
@@ -99,4 +99,40 @@
 #textInput {
   width: 200px;
   height: 109px;
+}
+
+.sendBtn {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 93%;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.sendButton {
+  background-color: #447bce;
+  color: white;
+  font-size: 16px;
+  border: 0;
+  border-radius: 10px;
+  width: 80px;
+  height: 40px;
+}
+
+.sendButton:disabled {
+  background-color: rgb(90, 111, 156);
+  color: rgb(173, 173, 173);
+  font-size: 16px;
+  border: 0;
+  border-radius: 10px;
+  width: 80px;
+  height: 40px;
+}
+
+.alert {
+  display: flex;
+  justify-content: flex-end;
+  color: red;
+  width: 93%;
 }

@@ -5,7 +5,9 @@
         <a id="btnContacto" href="/contact" *ngIf="contact == 0">Contacto</a>
         <a id="btnConfig" href="#config" *ngIf="config == 0">Configuración</a>
     </div>
-    <div class="logIn">
-        <app-login id="login"></app-login>
+    <div class="logIn" id="login" *ngIf="login == 0">
+        <div class="loginContainer">
+            <a href="/login"><img src="assets/img/login-icon-png-2.jpg" id="loginImg"></a>
+        </div>
     </div>
 </div>

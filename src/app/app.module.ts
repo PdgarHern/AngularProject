@@ -8,13 +8,13 @@ import { BtnInicioComponent } from './btn-inicio/btn-inicio.component';
 import { HeaderLogoComponent } from './header-logo/header-logo.component';
 import { BtnContactoComponent } from './btn-contacto/btn-contacto.component';
 import { BtnConfigComponent } from './btn-config/btn-config.component';
-import { LoginComponent } from './login/login.component';
 import { FooterComponent } from './footer/footer.component';
 import { HomeComponent } from './views/home/home.component';
 import { SliderComponent } from './slider/slider.component';
 import { EmpleadosComponent } from './empleados/empleados.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ContactComponent } from './views/contact/contact.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -24,7 +24,6 @@ import { ContactComponent } from './views/contact/contact.component';
     HeaderLogoComponent,
     BtnContactoComponent,
     BtnConfigComponent,
-    LoginComponent,
     FooterComponent,
     HomeComponent,
     SliderComponent,
@@ -34,7 +33,8 @@ import { ContactComponent } from './views/contact/contact.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -14,19 +14,35 @@
         <div class="emailDirection">
             <p>Email de contacto: pcGaming@tienda.es</p>
         </div>
-        <div class="emailForm">
-            <div class="nameForm">
-                <p>Nombre</p>
-                <input type="text" id="nameInput">
-            </div>
-            <div class="mailForm">
-                <p>Email</p>
-                <input type="text" id="mailInput">
-            </div>
-            <div class="textForm">
-                <p>Texto</p>
-                <input type="text" id="textInput">
-            </div>
+        <div class="emailForm form">
+            <form (ngSubmit)="submit()" #userForm="ngForm">
+                <div class="nameForm form-group">
+                    <p for="user">Nombre</p>
+                    <input type="text" name="user" id="nameInput" [(ngModel)]="contact.name" #name="ngModel" required>
+                </div>
+
+                <div *ngIf="name.invalid && name.dirty" class="alert">
+                    <div *ngIf="name.errors?.required">*Campo requerido</div>
+                </div>
+
+                <div class="mailForm form-group">
+                    <p for="email">Email</p>
+                    <input type="email" name="email" id="mailInput" [(ngModel)]="contact.email" #email="ngModel" required>
+                </div>
+                <div class="textForm form-group">
+                    <p for="text">Texto</p>
+                    <input type="text" name="text" id="textInput" [(ngModel)]="contact.text" #text="ngModel" required>
+                </div>
+
+                <div *ngIf="text.invalid && text.dirty" class="alert">
+                    <div *ngIf="text.errors?.required">*Campo requerido</div>
+                </div>
+
+
+                <div class="sendBtn">
+                    <button class="sendButton" type="submit" [disabled]="!userForm.form.valid">Enviar</button>
+                </div>
+            </form>
         </div>
     </div>
 </div>

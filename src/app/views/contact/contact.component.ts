@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { Contact } from 'src/app/modelos/contacto';
 
 @Component({
   selector: 'app-contact',
@@ -12,9 +13,17 @@ import { Component, Input, OnInit } from '@angular/core';
 
 export class ContactComponent implements OnInit {
 
-  constructor() { }
+  public contact: Contact;
+
+  constructor() {
+    this.contact = new Contact();
+  }
 
   ngOnInit(): void {
+  }
+
+  submit() {
+    console.log(this.contact.name + ", " + this.contact.email + ", " + this.contact.text);
   }
 
 }
