@@ -17,7 +17,12 @@ export class HomeComponent implements OnInit {
 
   constructor(private empleadoService: EmpleadosServiceService, private router: Router, route: ActivatedRoute) {
     route.params.subscribe((x) => {
-      this.loadInfo();
+      try {
+        this.loadInfo();
+      } catch (error) {
+        window.location.reload();
+      }
+      
     })
   }
 

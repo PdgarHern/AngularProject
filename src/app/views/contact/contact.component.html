@@ -25,10 +25,16 @@
                     <div *ngIf="name.errors?.required">*Campo requerido</div>
                 </div>
 
-                <div class="mailForm form-group">
+                <div class="mailForm form-group" [formGroup]="userEmail">
                     <p for="email">Email</p>
-                    <input type="email" name="email" id="mailInput" [(ngModel)]="contact.email" #email="ngModel" required>
+                    <input [class.is-invalid]="userEmail.get('email')?.invalid && userEmail.get('email')?.touched" type="email" name="email" id="mailInput" [(ngModel)]="contact.email" formControlName="email" required>
                 </div>
+
+                <div *ngIf="(tEmail?.invalid && tEmail?.touched) || tEmail?.dirty" class="alert">
+                    <div *ngIf="tEmail?.errors?.required" class="text-danger">*Campo requerido</div>
+                    <div *ngIf="tEmail?.errors?.pattern" class="text-danger">*El correo no es válido</div>
+                  </div>
+
                 <div class="textForm form-group">
                     <p for="text">Texto</p>
                     <input type="text" name="text" id="textInput" [(ngModel)]="contact.text" #text="ngModel" required>

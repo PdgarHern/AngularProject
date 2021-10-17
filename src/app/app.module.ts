@@ -15,6 +15,9 @@ import { EmpleadosComponent } from './empleados/empleados.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ContactComponent } from './views/contact/contact.component';
 import { FormsModule } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
+import { LoginComponent } from './views/login/login.component';
+import { PersonalZoneComponent } from './views/personal-zone/personal-zone.component';
 
 @NgModule({
   declarations: [
@@ -28,13 +31,16 @@ import { FormsModule } from '@angular/forms';
     HomeComponent,
     SliderComponent,
     EmpleadosComponent,
-    ContactComponent
+    ContactComponent,
+    LoginComponent,
+    PersonalZoneComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
