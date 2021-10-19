@@ -34,28 +34,35 @@ export class MenuComponent implements OnInit {
       this.login = 0;
       this.logout = 1;
     }
-    if (window.location.pathname == "/home") {
+    else if (window.location.pathname == "/home") {
       this.home = 1;
       this.contact = 0;
       this.config = 1;
       this.login = 0;
       this.logout = 1;
     }
-    if (window.location.pathname == "/contact") {
+    else if (window.location.pathname == "/contact") {
       this.home = 0;
       this.contact = 1;
       this.config = 1;
       this.login = 0;
       this.logout = 1;
     }
-    if (window.location.pathname == "/login") {
+    else if (window.location.pathname == "/login") {
       this.home = 0;
       this.contact = 0;
       this.config = 1;
       this.login = 1;
       this.logout = 1;
     }
-    if (window.location.pathname == "/personal-zone") {
+    else if (window.location.pathname == "/personal-zone") {
+      this.home = 1;
+      this.contact = 0;
+      this.config = 0;
+      this.login = 1;
+      this.logout = 0;
+    }
+    else {
       this.home = 1;
       this.contact = 0;
       this.config = 0;

@@ -10,6 +10,7 @@ const routes: Routes = [
   { path: 'contact', component: ContactComponent },
   { path: 'login', component: LoginComponent },
   { path: 'personal-zone', component: PersonalZoneComponent },
+  { path: 'personal-zone/:search', component: PersonalZoneComponent },
 
   { path: '', redirectTo: '/home', pathMatch: 'full'},
 ];

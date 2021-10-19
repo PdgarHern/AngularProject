@@ -1,8 +1,8 @@
 export class Contact {
 
-    public name: string;
-    public email: string;
-    public text: string;
+    name: string;
+    email: string;
+    text: string;
 
     constructor() {
         this.name = '';

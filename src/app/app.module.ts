@@ -18,6 +18,9 @@ import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
 import { LoginComponent } from './views/login/login.component';
 import { PersonalZoneComponent } from './views/personal-zone/personal-zone.component';
+import { Menu2Component } from './menu2/menu2.component';
+import { BtnBuscarComponent } from './btn-buscar/btn-buscar.component';
+import { ProductosComponent } from './productos/productos.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +36,10 @@ import { PersonalZoneComponent } from './views/personal-zone/personal-zone.compo
     EmpleadosComponent,
     ContactComponent,
     LoginComponent,
-    PersonalZoneComponent
+    PersonalZoneComponent,
+    Menu2Component,
+    BtnBuscarComponent,
+    ProductosComponent
   ],
   imports: [
     BrowserModule,
